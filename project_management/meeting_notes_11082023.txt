@@ -1,0 +1,13 @@
+roles:
+Zach - Monte Carlo
+Adrian - Random Generation & Plotting
+Ethan - Circumference Calc
+Liz - Area Calc
+Adam - User Input
+Alex - Unit Testing/Integration
+Chris - Scrum Master
+
+timeline:
+Complete each individual function by Sunday night
+Chris touch base with each member Friday/Saturday
+Compile status updates daily to track progress and roadblocks
