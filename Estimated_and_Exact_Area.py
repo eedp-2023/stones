@@ -15,7 +15,3 @@ def Area_Calc(R, next_neighbor_distance):
     print("The calculated area is: " + str(calculated_circle_area))
     print("The estimated area took " + str(estimate_time_total) + " seconds to calculate.")
     print("The exact area using pi took " + str(calculate_time_total) + " seconds to calculate.")
-
-test1 = np.array([4,2])
-
-Area_Calc(3,test1)
