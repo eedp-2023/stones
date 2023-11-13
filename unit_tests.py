@@ -30,7 +30,6 @@ class stonesTestCase(unittest.TestCase):
         xout3, yout3 = points(x3, y3, R3, n3, 2)
         self.assertTrue(np.allclose(np.sqrt(np.square(xout3 - x3) + np.square(yout3 - y3))), R3)
 
-
     def test_circumference(self):
 
         # centered square
