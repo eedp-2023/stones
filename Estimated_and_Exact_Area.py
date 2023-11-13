@@ -1,5 +1,8 @@
 import numpy as np
 from time import process_time
+import circumference
+
+
 def Area_Calc(R, next_neighbor_distance):
     estimate_time_start = process_time()
     isosceles_sides = R * np.ones(len(next_neighbor_distance))
@@ -17,3 +20,13 @@ def Area_Calc(R, next_neighbor_distance):
     print("The exact area using pi took " + str(calculate_time_total) + " seconds to calculate.")
 
     return(estimated_circle_area)
+
+
+if __name__=="__main__":
+    n = 100
+    x = -1
+    y = 10
+    r = 5
+    pts, x_pts, y_pts = circumference.create_point_array(x, y, r, n)
+    next_neighbor = circumference.get_circumference(x_pts, y_pts, r)
+    area = Area_Calc(r, next_neighbor)
