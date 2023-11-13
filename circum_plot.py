@@ -54,7 +54,7 @@ def points(x=0, y=0, R=1, N=4, spacing=1):
     if input_space == 2:
         plt.title("Randomly Spaced")
     plt.show()
-    return np.array(angle_x),np.array(angle_x)
+    return np.array(angle_x), np.array(angle_y)
 
 # Test Case
 # points_x, points_y = points(2.5,2.5, R =3.25, N = 10, spacing=2)
