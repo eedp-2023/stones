@@ -1,0 +1,19 @@
+Thursday Nov 9
+Ethan - Yesterday: N/A (project start)
+	Today: Implemented circumference functionality with limited debugging, awaiting unit tests for further function validation
+	Roadblocks: None
+Elizabeth - Yesterday: N/A (project start)
+	Today: Created a function that calculates estimated area and exact area of the circle with inputs of R and next_neighbor_distance vector . Tomorrow plan to add in calculation timer and push to git hub.
+	Roadblocks: None
+Adrian - "Yesterday": Successfully coded both the equally and randomly space tangent points. Successfully plotted the input circle, tangent points and origin point
+	Today(?): Convert code to function, awaiting feedback on plot content and quality (annotate point angle and coordinates?)
+	Roadblocks: Trying to commit to repository properly, file name appears but no code content. Really wish I could plot the meatball as the circle instead
+
+Friday Nov 10
+Elizabeth - Yesterday: Created the circle area calc function
+	Today: Added a timer to my area calc function and pushed to GitHub under the name ""Estimated_and_Exact_Area_Calc". Should be ready for some unit testing. If unit tests fail I'm happy to work on it and fix things. 
+	Roadblocks: None
+Adrian - Yesterday: Used prior code to easily convert into function, test cases confirms success. Still needs a proper unit test.
+	Today: Trying to add into GitHub properly, reaching out to Guo, Alexandria (GE Aerospace, US) for a unit test on function
+	Roadblocks: Still don't know how to properly commit to repository, may copy code into repository instead but defeats the purpose of trying to tame the git UI. 
+Alex - Wrote unit tests for the circumference and area estimation calculation functions -- I added a return value for the area estimation one so that there was a value to check, fixed my unit test
