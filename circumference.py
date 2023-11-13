@@ -1,6 +1,8 @@
 import random
 import math
 import numpy as np
+import time
+
 
 def find_y_coor(x, r):
   # random int decides whether y should be pos or negative
@@ -21,6 +23,9 @@ def create_point_array(x0, y0, r, n_pts):
 
 
 def get_circumference(x_pts: np.array, y_pts: np.array, R):
+  # Start Timer
+  start_time = time.time_ns()
+
   x_pts = np.array(x_pts)
   y_pts = np.array(y_pts)
   # Sort points by angle to find next neighbor
@@ -33,9 +38,15 @@ def get_circumference(x_pts: np.array, y_pts: np.array, R):
   y_diff = y_pts - y_pts[pt_indexer]
   next_neighbor_distance = np.sqrt(x_diff ** 2 + y_diff ** 2)
 
-  print("Estimated Circumference: {:0.5f}".format(sum(next_neighbor_distance)))
-  print("Actual Circumference:    {:0.5f}".format(2 * np.pi * R))
-  return next_neighbor_distance
+  # print("Estimated Circumference: {:0.5f}".format(sum(next_neighbor_distance)))
+  # print("Actual Circumference:    {:0.5f}".format(2 * np.pi * R))
+
+  end_time = time.time_ns()
+
+  print("Circumference Calculation Time: {0:.3f} us".format((end_time - start_time)/1e3))
+
+  # Return [Next Neighbor Distance, Estimated Circumference, Actual Circumference]
+  return next_neighbor_distance, sum(next_neighbor_distance), 2*np.pi*R
 
 
 if __name__=="__main__":
@@ -44,7 +55,14 @@ if __name__=="__main__":
   y = 10
   r = 5
   pts, x_pts, y_pts = create_point_array(x, y, r, n)
-  next_neighbor = get_circumference(x_pts, y_pts, r)
+  num_repetitions = 1e4
+  print("Timing {:.0f} Iterations".format(num_repetitions))
+  st_time = time.time_ns()
+  for i in range(int(num_repetitions)):
+    next_neighbor = get_circumference(x_pts, y_pts, r)
+  end_time = time.time_ns()
+  print("Runtime: {:.3f} us".format((end_time-st_time)/1e3))
+  print("Per call: {:.3f} us".format((end_time-st_time)/1e3/num_repetitions))
    # Mini Unit test to kick the tires
   '''
   num_test = 3
