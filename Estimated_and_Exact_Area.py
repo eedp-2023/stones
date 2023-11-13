@@ -19,7 +19,7 @@ def Area_Calc(R, next_neighbor_distance):
     print("The estimated area took " + str(estimate_time_total) + " seconds to calculate.")
     print("The exact area using pi took " + str(calculate_time_total) + " seconds to calculate.")
 
-    return(estimated_circle_area)
+    return(estimated_circle_area, calculated_circle_area)
 
 
 if __name__=="__main__":
