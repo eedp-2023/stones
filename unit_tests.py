@@ -1,15 +1,35 @@
 import unittest
-import random # seed
 import numpy as np
 from math import sqrt
+# from random import seed
 
-from area import *
+from circum_plot import points
 from circumference import get_circumference
-from circum_plot import *
 from Estimated_and_Exact_Area import Area_Calc
 
 
 class stonesTestCase(unittest.TestCase):
+
+    def test_pt_generation(self):
+
+        # equally spaced points, n=4
+        x1 = 0; y1 = 0; R1 = 1; n1 = 4
+        xout1, yout1 = points(x1, y1, R1, n1, 1)
+        self.assertTrue(np.allclose(xout1, np.array([1., 0., -1., 0.])))
+        self.assertTrue(np.allclose(yout1, np.array([0., 1., 0., -1.])))
+
+        # non-centered points, n=3
+        x2 = 1; y2 = -1; R2 = 2; n2 = 3
+        xout2, yout2 = points(x2, y2, R2, n2, 1)
+        self.assertTrue(np.allclose(xout2, np.array([3., 0., 0.])))
+        self.assertTrue(np.allclose(yout2, np.array([-1., 2*sqrt(0.75)-1, -2*sqrt(0.75)-1])))
+
+        # seed(1)
+        # random points, check all points are on circle
+        x3 = 0; y3 = 0; R3 = 5; n3 = 5
+        xout3, yout3 = points(x3, y3, R3, n3, 2)
+        self.assertTrue(np.allclose(np.sqrt(np.square(xout3 - x3) + np.square(yout3 - y3))), R3)
+
 
     def test_circumference(self):
 
@@ -35,7 +55,6 @@ class stonesTestCase(unittest.TestCase):
         x4 = np.array([0.5, -0.5, -0.5, 0.5])
         y4 = np.array([sqrt(0.75), sqrt(0.75), -sqrt(0.75), -sqrt(0.75)])
         out4 = np.array([2*sqrt(0.75), 1., 2*sqrt(0.75), 1.]) # order manually checked
-        print(get_circumference(x4, y4, 1))
         self.assertTrue(np.allclose(get_circumference(x4, y4, 1), out4))
 
     def test_area(self):
