@@ -1,0 +1,14 @@
+Nov 13 update meeting
+Zach - integrated his material into each persons code for monte carlo,,, going to tackle extra credit, calc pi using monte carlo
+Adrian - unit tested added by Alex
+Ethan - 95% done, need to add timing functionality, return estimated and return cir
+Liz - return estimated and calculated area
+Alex - going to rename Adams file to use as function/make main
+Adam - on vacation, sent file on box
+Chris - submit URL to team github, update readme with what our main file is/how to run
+
+check for negative radius value
+make integrated file that pulls together each function, use Adam/s code as base
+are we going to tackle extra credit
+be prepared for report out
+
