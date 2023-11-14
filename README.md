@@ -14,4 +14,4 @@ Numerical approximation homework repo for team "stones".
 - Chris - Scrum Master
 
 # Running our Code:
-Run main.py to execute our team's code
+Run main.py to execute our team's code. The extra credit Monte Carlo pi estimation can be run from the mc_pi.py script.
