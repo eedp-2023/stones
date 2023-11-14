@@ -42,12 +42,12 @@ while x0_loop_bool:
                             try:
                                 user_N_input = int(user_N_input)
 
-                                if user_N_input > 0:
+                                if user_N_input > 2:
                                     N_loop_bool = False
                                     spacing_loop_bool = True
 
                                 else:
-                                    print("The value of N must be greater than 0.")
+                                    print("The value of N must be greater than 2.")
                                     continue
 
                                 while spacing_loop_bool:
