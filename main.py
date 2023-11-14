@@ -74,7 +74,7 @@ while x0_loop_bool:
                                             x_pts, y_pts = points(user_x0_input, user_y0_input, user_r_input,
                                                                   user_N_input, user_spacing_input)
                                             next_neighbor_dist, est_circumference, calc_circumference = get_circumference(x_pts, y_pts,
-                                                                                                                          user_r_input)
+                                                                                                                          user_r_input, user_x0_input, user_y0_input)
                                             est_area, calc_area = Area_Calc(user_r_input, next_neighbor_dist)
 
                                             print("\nYour outputs: ")

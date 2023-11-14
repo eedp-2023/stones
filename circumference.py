@@ -22,14 +22,14 @@ def create_point_array(x0, y0, r, n_pts):
   return array, x_rand_coor, y_calc_coor
 
 
-def get_circumference(x_pts: np.array, y_pts: np.array, R):
+def get_circumference(x_pts: np.array, y_pts: np.array, R, x0, y0):
   # Start Timer
   start_time = time.time_ns()
 
   x_pts = np.array(x_pts)
   y_pts = np.array(y_pts)
   # Sort points by angle to find next neighbor
-  pt_angle = np.arctan2(y_pts, x_pts)
+  pt_angle = np.arctan2(y_pts-y0, x_pts-x0)
   pt_reshuffle_ind = np.argsort(pt_angle)
   x_pts = x_pts[pt_reshuffle_ind]
   y_pts = y_pts[pt_reshuffle_ind]
