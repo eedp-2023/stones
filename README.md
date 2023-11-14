@@ -12,3 +12,6 @@ Numerical approximation homework repo for team "stones".
 - Adam - User Input
 - Alex - Unit Testing/Integration
 - Chris - Scrum Master
+
+# Running our Code:
+Run main.py to execute our team's code
