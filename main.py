@@ -70,6 +70,7 @@ while x0_loop_bool:
                                                 print("Spacing: random")
 
                                             print("\nCalculating circle parameters...\n")
+                                            print("Please close plot window to proceed")
 
                                             x_pts, y_pts = points(user_x0_input, user_y0_input, user_r_input,
                                                                   user_N_input, user_spacing_input)
